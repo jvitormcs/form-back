@@ -33,7 +33,7 @@ module.exports= class CadastroController {
             secure: true,
             auth: {
                 user: 'contato@realixo.com',
-                pass: 'iycaxothkfznzsfx'
+                pass: 'qfbobaxejrawadba'
             }
         });
 
