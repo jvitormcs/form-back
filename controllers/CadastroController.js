@@ -1,4 +1,5 @@
 const User = require('../model/Cadastro')
+const nodemailer = require('nodemailer')
 
 
 module.exports= class CadastroController {
@@ -32,7 +33,11 @@ module.exports= class CadastroController {
             auth: {
                 user: 'contato@realixo.com',
                 pass: 'qfbobaxejrawadba'
+            },
+            tls: {
+                
             }
+
         });
 
 
