@@ -5,7 +5,7 @@ module.exports= class CadastroController {
 
 
     static async Register(req, res){
-        const {email, nome, sobrenome, telefone, tipoPessoa, diaEntrega, horarioEntrega } = req.body
+        const {email, nome, sobrenome, telefone, tipoPessoa} = req.body
         const {cep, endereco, numero, complemento, bairro} = req.body
         const {tipoResidencia, numeroResidentes} = req.body
     
@@ -16,8 +16,6 @@ module.exports= class CadastroController {
             sobrenome, 
             telefone, 
             tipoPessoa,
-            diaEntrega,
-            horarioEntrega,
             cep,
             endereco,
             numero,
@@ -412,8 +410,6 @@ module.exports= class CadastroController {
                 <li>${sobrenome}</li>
                 <li>${telefone}</li>
                 <li>${tipoPessoa}</li>
-                <li>${diaEntrega}</li>
-                <li>${horarioEntrega}</li>
                 <li>${cep}</li>
                 <li>${endereco}</li>
                 <li>${numero}</li>

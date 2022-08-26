@@ -3,7 +3,7 @@ const { DataTypes } = require('sequelize')
 const db = require('../database/conn')
 
 
-const User = db.define('User', {
+const User = db.define('Form_cpntact', {
     email: {
         type: DataTypes.STRING(100),
         allowNull: false,
@@ -55,16 +55,6 @@ const User = db.define('User', {
     },
     numeroResidentes: {
         type: DataTypes.STRING(100),
-        require: true,
-    },
-    diaEntrega: {
-        type: DataTypes.STRING(100),
-        allowNull: false,
-        require: true,
-    },
-    horarioEntrega: {
-        type: DataTypes.STRING(100),
-        allowNull: false,
         require: true,
     }
     
