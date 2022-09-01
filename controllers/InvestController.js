@@ -1,4 +1,4 @@
-const conn = require('../db/conn')
+const conn = require('../database/conn')
 const Invest = require('../models/invest')
 
 module.exports = class InvestController {
