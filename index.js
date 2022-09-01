@@ -11,7 +11,6 @@ app.use(express.json())
 
 
 app.use('/form', cadastroRoutes)
-app.use('invest', InvestController.Register)
 
 const PORT = process.env.PORT || 8081
 
