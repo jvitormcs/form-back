@@ -1,5 +1,5 @@
 const conn = require('../database/conn')
-const Invest = require('../models/invest')
+const Invest = require('../model/invest')
 
 module.exports = class InvestController {
 
