@@ -5,14 +5,14 @@ module.exports = class InvestController {
 
     static async Register(req, res) {
 
-        const {nome, sobrenome, email, telefone} = req.body
+        const {nome, sobrenome, email, telefone, lang} = req.body
 
         const user = {
             Nome: nome,
             Sobrenome: sobrenome,
             Email: email,
-            Telefone: telefone
-
+            Telefone: telefone,
+            Lang: lang
         }
 
         try{

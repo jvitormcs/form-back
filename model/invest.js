@@ -27,6 +27,10 @@ const Investidor = db.define('Investidore', {
     Telefone: {
         type: DataTypes.STRING(16),
         require: true,
+    },
+    Lang: {
+        type: DataTypes.STRING(16),
+        require: true,
     }
     
 })
