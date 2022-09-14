@@ -3,7 +3,7 @@ const { DataTypes } = require('sequelize')
 const db = require('../database/conn')
 
 
-const Investidor = db.define('Investidore', {
+const Investidor = db.define('Investidores', {
     Id_Investidor:{
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -33,7 +33,7 @@ const Investidor = db.define('Investidore', {
         require: true,
     }
     
-})
+}, {freezeTableName: true})
 
 
 
