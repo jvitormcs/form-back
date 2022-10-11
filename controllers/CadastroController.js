@@ -26,7 +26,7 @@ module.exports= class CadastroController {
             numeroResidentes,
         }
 
-        let transporter = nodemailer.createTransport({
+        /* let transporter = nodemailer.createTransport({
             host: 'smtp.gmail.com',
             port: 587,
             secure: true,
@@ -38,14 +38,14 @@ module.exports= class CadastroController {
                 
             }
 
-        });
+        }); */
 
 
 
         try{
             await User.create(user)
 
-            transporter.sendMail({
+            /* transporter.sendMail({
                 from: 'Realixo <contato@realixo.com>',
                 to: `${email}`,
                 subject: 'Gratidão por fazer parte deste sonho.',
@@ -83,7 +83,7 @@ module.exports= class CadastroController {
             
             
                 <style type="text/css" media="screen">
-                    /* Linked Styles */
+                    
                     body {
                         padding: 0 !important;
                         margin: 0 !important;
@@ -106,7 +106,7 @@ module.exports= class CadastroController {
             
                     img {
                         -ms-interpolation-mode: bicubic;
-                        /* Allow smoother rendering of resized image in Internet Explorer */
+                        
                     }
             
                     .mcnPreviewText {
@@ -120,7 +120,7 @@ module.exports= class CadastroController {
                         color: #000001 !important;
                     }
             
-                    /* Mobile styles */
+                    
                     @media only screen and (max-device-width: 480px),
                     only screen and (max-width: 480px) {
                         .mobile-shell {
@@ -401,9 +401,9 @@ module.exports= class CadastroController {
                 console.log(message);
             }).catch(err => {
                 console.log(err)
-            })
+            }) */
 
-            transporter.sendMail({
+            /* transporter.sendMail({
                 from: 'Realixo <contato@realixo.com>',
                 to: `contato@realixo.com`,
                 subject: 'Temos um novo cadastro!',
@@ -424,7 +424,7 @@ module.exports= class CadastroController {
                 <li>${tipoResidencia}</li>
                 <li>${numeroResidentes}</li>
                 <ul>`
-            })
+            }) */
         } catch(err){
             console.log(err)
         }
