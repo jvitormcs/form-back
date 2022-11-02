@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('u997776439_db_realixo_sit', 'u997776439_ragnermoura', 'Django77' ,{
-    host: 'sql566.main-hosting.eu',
+const sequelize = new Sequelize('u626006440_banco_site', 'u626006440_rea_site_prin', 'R^?&Y?X~!l0' ,{
+    host: 'sql816.main-hosting.eu',
     dialect: 'mysql'
 })
 
