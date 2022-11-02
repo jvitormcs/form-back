@@ -27,7 +27,7 @@ const Site = db.define('new_contacts', {
         type: DataTypes.STRING(255),
         require: true,
     },
-    created_ad: {
+    created_at: {
         type: DataTypes.DATE,
         allowNull: true,
         defaultValue: DataTypes.NOW()
