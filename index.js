@@ -4,11 +4,11 @@ const app = express()
 const CadastroController = require('./controllers/CadastroController');
 const InvestController = require('./controllers/InvestController')
 const cadastroRoutes = require('./routes')
-
+const cors = require('cors')
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
-
+app.use(cors())
 
 app.use('/form', cadastroRoutes)
 
