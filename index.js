@@ -11,6 +11,9 @@ app.use(express.json())
 app.use(cors())
 
 app.use('/form', cadastroRoutes)
+app.get('/', (req,res) => {
+    res.status(200).json({message: 'OK'})
+})
 
 const PORT = process.env.PORT || 8081
 
