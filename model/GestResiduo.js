@@ -3,7 +3,7 @@ const { DataTypes } = require('sequelize')
 const db = require('../database/conn')
 
 
-const GestResiduo = db.define('LogisReversa', {
+const GestResiduo = db.define('GestResiduo', {
     id:{
         type: DataTypes.BIGINT,
         autoIncrement: true,

@@ -3,7 +3,7 @@ const { DataTypes } = require('sequelize')
 const db = require('../database/conn')
 
 
-const Filial = db.define('LogisReversa', {
+const Filial = db.define('Filial', {
     id:{
         type: DataTypes.BIGINT,
         autoIncrement: true,
