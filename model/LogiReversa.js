@@ -14,7 +14,7 @@ const LogiReversa = db.define('LogisReversa', {
         allowNull: false,
         require: true,
     },
-    nomeEmpresa: {
+    empresa: {
         type: DataTypes.STRING(150),
         allowNull: false,
         require: true,
