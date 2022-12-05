@@ -10,8 +10,8 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(cors())
 
-app.use('/form', cadastroRoutes)
-app.get('/', (req,res) => {
+app.use('/api/form', cadastroRoutes)
+app.get('/api/security', (req,res) => {
     res.status(200).json({message: 'OK'})
 })
 

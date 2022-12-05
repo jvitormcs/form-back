@@ -6,6 +6,10 @@ const SiteController = require('./controllers/SiteController');
 
 router.post('/valida-dados', CadastroController.Register )
 router.post('/investidores', InvestController.Register)
-router.post('/site', SiteController.cad)
-
+router.post('/residencial', SiteController.cadPrincipal)
+router.post('/empresa', SiteController.cadEmpresa)
+router.post('/filial', SiteController.cadFilial)
+router.post('/logisReversa', SiteController.LogiReversa)
+router.post('/gestResiduo', SiteController.GestResiduo)
+router.post('/contact', SiteController.Contact)
 module.exports = router
