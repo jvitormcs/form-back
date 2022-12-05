@@ -67,11 +67,12 @@ module.exports = class SiteController{
 
     static async cadFilial (req, res){
 
-        const {nome, empresa, email, cidade, uf} = req.body
+        const {nome, empresa, telefone, email, cidade, uf} = req.body
 
         const user = {
             nome,
             empresa,
+            telefone,
             email,
             cidade,
             uf
