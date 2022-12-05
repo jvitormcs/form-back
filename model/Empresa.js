@@ -14,6 +14,11 @@ const Empresas = db.define('ContatoEmpresas', {
         allowNull: false,
         require: true,
     },
+    empresa: {
+        type: DataTypes.STRING(150),
+        allowNull: false,
+        require: true,
+    },
     email: {
         type: DataTypes.STRING(100),
         allowNull: false,
