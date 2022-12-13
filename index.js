@@ -19,8 +19,6 @@ app.get('/api/security', (req,res) => {
 
 app.use('/', redirectRoutes)
 
-
-
 const PORT = process.env.PORT || 8081
 
 conn.sync().then(() => {app.listen(PORT)}).catch((err) => console.log(err))
