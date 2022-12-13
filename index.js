@@ -19,10 +19,7 @@ app.get('/api/security', (req,res) => {
 
 app.use('/', redirectRoutes)
 
-/* app.get('/quem-somos', (req, res) => {
-    console.log('redirecionei aqui colega')
-    res.redirect(301,'https://realixo.com.br/quem-somos')
-}) */
+
 
 const PORT = process.env.PORT || 8081
 

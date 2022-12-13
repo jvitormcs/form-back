@@ -4,6 +4,10 @@ const sequelize = new Sequelize('u626006440_banco_site', 'u626006440_rea_site_pr
     host: 'sql816.main-hosting.eu',
     dialect: 'mysql'
 })
+/* const sequelize = new Sequelize('u623723531_teste', 'u623723531_testando', 'Macacocacocacocaco=001001032' ,{
+    host: 'sql803.main-hosting.eu',
+    dialect: 'mysql'
+}) */
 
 try{
     sequelize.authenticate()

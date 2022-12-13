@@ -20,7 +20,7 @@ module.exports = class SiteController{
             cep
         }
 
-         let transporter = nodemailer.createTransport({
+        let transporter = nodemailer.createTransport({
             host: 'smtp.gmail.com',
             port: 465,
             secure: true,
@@ -30,7 +30,6 @@ module.exports = class SiteController{
             },
 
         });
-
     
         try {
 
@@ -44,7 +43,6 @@ module.exports = class SiteController{
                 html: `'<h2 style="color: #00b09c">EEEEEEEi Timeee... corre que temos um novo cadastro aqui!!<h2>
                 <ul>
                 <li>Nome: ${nome}</li>
-                <li>Empresa: ${empresa}</li>
                 <li>Email: ${email}</li>
                 <li>Telefone: ${telefone}</li>
                 <li>Local do site: Coleta Residencial</li>
@@ -295,8 +293,19 @@ module.exports = class SiteController{
                                                 </table>
                                             </div>
                                             <!-- END Article / Title + Copy + Button -->
-            
-            
+                                            
+                                            <tr>
+                                                <td class="img" width="200"
+                                                                                    style="font-size:0pt; line-height:0pt; text-align:left;">
+                                                                                    <a href="https://wa.me/5511912417855" target="_blank">
+                                                                                        <button  width="200"
+                                                                                            height="100" mc:edit="image_8"
+                                                                                            style="width: 330px; margin-bottom: 40px; margin-left: auto; margin-right: auto; display: block; color: #FFF; height: 50px; border:none; background-color: #00b09c; border-radius: 5px; font-size: 18px;"
+                                                                                            border="0" alt="" >Nós chame no WhatsApp</button></a>
+                                                                                </td>
+                                                        
+                                                        <tr>
+                                            
                                         <!-- Footer -->
                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                             <tr>
@@ -695,8 +704,19 @@ module.exports = class SiteController{
                                                 </table>
                                             </div>
                                             <!-- END Article / Title + Copy + Button -->
-            
-            
+                                            
+                                            <tr>
+                                                <td class="img" width="200"
+                                                                                    style="font-size:0pt; line-height:0pt; text-align:left;">
+                                                                                    <a href="https://wa.me/5511912417855" target="_blank">
+                                                                                        <button  width="200"
+                                                                                            height="100" mc:edit="image_8"
+                                                                                            style="width: 330px; margin-bottom: 40px; margin-left: auto; margin-right: auto; display: block; color: #FFF; height: 50px; border:none; background-color: #00b09c; border-radius: 5px; font-size: 18px;"
+                                                                                            border="0" alt="" >Nós chame no WhatsApp</button></a>
+                                                                                </td>
+                                                        
+                                                        <tr>
+                                            
                                         <!-- Footer -->
                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                             <tr>
@@ -793,7 +813,7 @@ module.exports = class SiteController{
             </body>
             
             </html>`
-            })
+            }) 
 
             res.status(200).json({
                 success: true,
@@ -837,7 +857,7 @@ module.exports = class SiteController{
 
             await Filial.create(user)
 
-            transporter.sendMail({
+             transporter.sendMail({
                 from: 'Realixo <contato@realixo.com>',
                 to: `contato@realixo.com`,
                 subject: `Novo Cadastro`,
@@ -1096,8 +1116,19 @@ module.exports = class SiteController{
                                                 </table>
                                             </div>
                                             <!-- END Article / Title + Copy + Button -->
-            
-            
+                                            
+                                            <tr>
+                                                <td class="img" width="200"
+                                                                                    style="font-size:0pt; line-height:0pt; text-align:left;">
+                                                                                    <a href="https://wa.me/5511912417855" target="_blank">
+                                                                                        <button  width="200"
+                                                                                            height="100" mc:edit="image_8"
+                                                                                            style="width: 330px; margin-bottom: 40px; margin-left: auto; margin-right: auto; display: block; color: #FFF; height: 50px; border:none; background-color: #00b09c; border-radius: 5px; font-size: 18px;"
+                                                                                            border="0" alt="" >Nós chame no WhatsApp</button></a>
+                                                                                </td>
+                                                        
+                                                        <tr>
+                                            
                                         <!-- Footer -->
                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                             <tr>
@@ -1194,7 +1225,7 @@ module.exports = class SiteController{
             </body>
             
             </html>`
-            })
+            }) 
 
             res.status(200).json({
                 success: true,
@@ -1212,11 +1243,10 @@ module.exports = class SiteController{
     
     static async GestResiduo (req, res){
 
-        const {nome, empresa, telefone, email, cidade, uf} = req.body
+        const {nome, telefone, email, cidade, uf} = req.body
 
         const user = {
             nome,
-            empresa,
             telefone,
             email,
             cidade,
@@ -1238,7 +1268,7 @@ module.exports = class SiteController{
 
             await GestResiduo.create(user)
 
-            transporter.sendMail({
+           transporter.sendMail({
                 from: 'Realixo <contato@realixo.com>',
                 to: `contato@realixo.com`,
                 subject: `Novo Cadastro`,
@@ -1246,10 +1276,9 @@ module.exports = class SiteController{
                 html: `'<h2 style="color: #00b09c">EEEEEEEi Timeee... corre que temos um novo cadastro aqui!!<h2>
                 <ul>
                 <li>Nome: ${nome}</li>
-                <li>Empresa: ${empresa}</li>
                 <li>Email: ${email}</li>
                 <li>Telefone: ${telefone}</li>
-                <li>Local do site: Gestão de Resíduos</li>
+                <li>Local do site: Evento lixo zero</li>
                 <ul>
                 `
             })
@@ -1497,8 +1526,19 @@ module.exports = class SiteController{
                                                 </table>
                                             </div>
                                             <!-- END Article / Title + Copy + Button -->
-            
-            
+                                            
+                                            <tr>
+                                                <td class="img" width="200"
+                                                                                    style="font-size:0pt; line-height:0pt; text-align:left;">
+                                                                                    <a href="https://wa.me/5511912417855" target="_blank">
+                                                                                        <button  width="200"
+                                                                                            height="100" mc:edit="image_8"
+                                                                                            style="width: 330px; margin-bottom: 40px; margin-left: auto; margin-right: auto; display: block; color: #FFF; height: 50px; border:none; background-color: #00b09c; border-radius: 5px; font-size: 18px;"
+                                                                                            border="0" alt="" >Nós chame no WhatsApp</button></a>
+                                                                                </td>
+                                                        
+                                                        <tr>
+                                            
                                         <!-- Footer -->
                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                             <tr>
@@ -1595,7 +1635,7 @@ module.exports = class SiteController{
             </body>
             
             </html>`
-            })
+            }) 
 
             res.status(200).json({
                 success: true,
@@ -1634,7 +1674,7 @@ module.exports = class SiteController{
 
             await LogiReversa.create(user)
 
-            transporter.sendMail({
+            /* transporter.sendMail({
                 from: 'Realixo <contato@realixo.com>',
                 to: `contato@realixo.com`,
                 subject: `Novo Cadastro`,
@@ -1991,7 +2031,7 @@ module.exports = class SiteController{
             </body>
             
             </html>`
-            })
+            }) */
 
             res.status(200).json({
                 success: true,
@@ -2017,7 +2057,7 @@ module.exports = class SiteController{
         } = req.body
 
 
-        let transporter = nodemailer.createTransport({
+         let transporter = nodemailer.createTransport({
             host: 'smtp.gmail.com',
             port: 465,
             secure: true,
@@ -2027,6 +2067,7 @@ module.exports = class SiteController{
             },
 
         });
+       
         try{
 
             transporter.sendMail({
