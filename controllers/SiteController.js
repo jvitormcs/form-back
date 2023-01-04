@@ -45,6 +45,7 @@ module.exports = class SiteController{
                 <li>Nome: ${nome}</li>
                 <li>Email: ${email}</li>
                 <li>Telefone: ${telefone}</li>
+                <li>Cep: ${cep}</li>
                 <li>Local do site: Coleta Residencial</li>
                 <ul>
                 `
@@ -456,6 +457,7 @@ module.exports = class SiteController{
                 <li>Empresa: ${empresa}</li>
                 <li>Email: ${email}</li>
                 <li>Telefone: ${telefone}</li>
+                <li>CEP: ${cep}</li>
                 <li>Local do site: Coleta para Empresas</li>
                 <ul>
                 `
@@ -1674,7 +1676,7 @@ module.exports = class SiteController{
 
             await LogiReversa.create(user)
 
-            /* transporter.sendMail({
+            transporter.sendMail({
                 from: 'Realixo <contato@realixo.com>',
                 to: `contato@realixo.com`,
                 subject: `Novo Cadastro`,
@@ -2031,7 +2033,7 @@ module.exports = class SiteController{
             </body>
             
             </html>`
-            }) */
+            })
 
             res.status(200).json({
                 success: true,
