@@ -5,7 +5,12 @@ router.get('/', (req, res) => {
     console.log('redirecionei aqui colega')
     res.redirect(301,'https://realixo.com.br')
 })
+
 router.get('/faca-parte', (req, res) => {
+    console.log('redirecionei aqui colega')
+    res.redirect(301,'https://realixo.com.br/coleta-residencia')
+})
+router.get('/cadastro', (req, res) => {
     console.log('redirecionei aqui colega')
     res.redirect(301,'https://realixo.com.br/coleta-residencia')
 })
